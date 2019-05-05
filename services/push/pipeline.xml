@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="java.lang.Object" maxOccurs="unbounded" minOccurs="0" name="events"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="ComplexEvents" definition="nabu.analytics.cep.types.model.cep.ComplexEvent" name="complexEvent" namespace="nabu.analytics.cep.types.model.cep"/>
+    <field minOccurs="0" name="jdbcConnection" type="java.lang.String"/>
+    <structure collectionName="ComplexEvents" definition="nabu.analytics.cep.types.model.cep.ComplexEvent" maxOccurs="unbounded" minOccurs="0" name="complexEvents" namespace="nabu.analytics.cep.types.model.cep"/>
+    <field name="severity" type="be.nabu.utils.cep.api.EventSeverity"/>
+</structure>
