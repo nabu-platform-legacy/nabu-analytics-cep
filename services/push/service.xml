@@ -134,7 +134,7 @@
 						id="f1629d09-119c-4ea1-9526-6c7ef6036845">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 							disabled="false"
-							comment="Map id &amp; created"
+							comment="Map id"
 							id="4a8029f7-1a05-4b3b-b961-4586443bae20">
 						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 								disabled="false"
@@ -156,24 +156,47 @@
 							<from>resultf2bc8e32232645c2b2618bf5d56c0b1a/uuid</from>
 							<to>complexEvent/id</to>
 						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="73526703-b1ce-4003-bfb2-cbf4b06a2e98"
+								mask="false"
+								optional="true"
+								fixedValue="true">
+							<from>false</from>
+							<to>complexEvent/anonymized</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="c629884c-2b61-4b78-ba16-fa0a87b6dca8"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/clientId</from>
+							<to>complexEvent/complexEventClientId</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+							disabled="false"
+							label="complexEvent/created = null"
+							id="3e08524d-c289-4ce8-937d-0de5e60a35b0">
 						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 								disabled="false"
-								id="3f89a98f-80ce-4c15-967a-ad61b876ea6c"
+								id="d053c238-e29b-4f31-a51b-20b9540d7d2d"
 								serviceId="nabu.utils.Date.now"
-								resultName="result29b591f3898d4442b25e53824e2036ac"
+								resultName="result4575db343a584d3a842428c9875dfe1f"
 								temporaryMapping="true"
-								x="231"
-								y="163"
+								x="239"
+								y="127"
 								invocationOrder="0"
 								asynchronous="false">
 						</steps>
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 								disabled="false"
-								id="ff434c0c-d549-413f-8b7c-765671d1c0ae"
+								id="030880ea-d6a6-4073-8bf9-9a140a141f0e"
 								mask="false"
 								optional="false"
 								fixedValue="false">
-							<from>result29b591f3898d4442b25e53824e2036ac/date</from>
+							<from>result4575db343a584d3a842428c9875dfe1f/date</from>
 							<to>complexEvent/created</to>
 						</steps>
 					</steps>

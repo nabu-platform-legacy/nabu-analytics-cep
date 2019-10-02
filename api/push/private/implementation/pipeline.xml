@@ -1,0 +1,5 @@
+<structure interface="$self:api" name="pipeline">
+    <structure name="input" validate="true"/>
+    <structure name="output"/>
+    <structure collectionName="ComplexEventClients" definition="nabu.analytics.cep.types.model.cep.ComplexEventClient" name="client" namespace="nabu.analytics.cep.types.model.cep"/>
+</structure>

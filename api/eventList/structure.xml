@@ -1,0 +1,3 @@
+<structure name="eventList">
+    <structure definition="nabu.analytics.cep.api.event" maxOccurs="unbounded" minOccurs="0" name="events"/>
+</structure>

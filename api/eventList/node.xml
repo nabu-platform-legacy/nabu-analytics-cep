@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2019-05-06T08:07:03.444+02:00" lastModified="2019-05-06T08:07:09.221+02:00" leaf="true" version="2"><environmentId>hyperion</environmentId><hidden>false</hidden><properties/><references>nabu.analytics.cep.api.event</references></node>

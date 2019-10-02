@@ -1,0 +1,248 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="5ac2ade0-9308-4620-8872-1f59d7b55a2b">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			comment="Get apiKey &amp; server"
+			id="9725750a-b81a-4e0f-a60c-f4fc1e8eb33d">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="9ce8469a-44d6-4fd7-af7f-c83355d30719"
+				serviceId="nabu.utils.Server.property"
+				resultName="resultd262b702e034445783162421cc54960f"
+				temporaryMapping="true"
+				x="81"
+				y="92"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f6144453-e8cd-4fe6-ad4e-c3b1d8a5c4ac"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>cepApiKey</from>
+				<to>key</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="954a1956-4a25-4387-a049-3b3051e31015"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultd262b702e034445783162421cc54960f/value</from>
+			<to>apiKey</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="4bb4b62a-f289-4fd8-8aee-2ee482a40a0f"
+				serviceId="nabu.utils.Server.property"
+				resultName="resulte1d8836d2677415195693f26154f85a8"
+				temporaryMapping="true"
+				x="93"
+				y="171"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="478ce317-4fea-4780-9c3f-76f4540d550d"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>cepServer</from>
+				<to>key</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="e3ce1bea-33e5-494a-9a9e-0126eeeb358e"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte1d8836d2677415195693f26154f85a8/value</from>
+			<to>server</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			comment="Get log level (if any)"
+			id="5ee5a12a-d7de-423f-b4fe-9458fb665d51">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="d8ab1973-5034-4059-b560-4c039c7c2994"
+				serviceId="nabu.utils.Server.property"
+				resultName="result07d1325596c84226b665c2a6472c3120"
+				temporaryMapping="true"
+				x="123"
+				y="91"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="79ddd6aa-2295-461d-816f-448338479f6b"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>cepSeverity</from>
+				<to>key</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="b6a1010f-bcd1-46a0-8e9d-a1b669dcbcd9"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result07d1325596c84226b665c2a6472c3120/value</from>
+			<to>severity</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+			disabled="false"
+			id="78cf8231-176c-48fa-8091-cf26581e2a30">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				label="apiKey = null"
+				id="2160a116b9ce43e8b70d2e6d98291db7">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="5d6fe020aefe4f5f80f8675cf736a274"
+					serviceId="nabu.utils.Server.log"
+					resultName="result32e4c72c33c846ae89af579fe250c881"
+					temporaryMapping="true"
+					x="91"
+					y="53"
+					invocationOrder="0"
+					asynchronous="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1bd675f4ba11426a99a18b39c12d6245"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>Could not find parameter "cepApiKey"</from>
+					<to>message</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="7ed0acf5fe67432a985fc9dc3245149a"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>WARN</from>
+					<to>level</to>
+				</steps>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				label="server = null"
+				id="65c1fef0-e27d-4b7e-8ffc-75522a915672">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="23c34239-03dd-483a-973d-5cfef86edd06"
+					serviceId="nabu.utils.Server.log"
+					resultName="result32e4c72c33c846ae89af579fe250c881"
+					temporaryMapping="true"
+					x="91"
+					y="53"
+					invocationOrder="0"
+					asynchronous="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="124dd0d4-4f1e-45b7-9956-8b9c2b44deed"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>Could not find parameter "cepServer"</from>
+					<to>message</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="77e22b9c-e2ec-498d-ae00-1530dd2dafa6"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>WARN</from>
+					<to>level</to>
+				</steps>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+				disabled="false"
+				id="59968ec4-e5a6-460e-b61e-607bf70dfdea">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					comment="Map to defined"
+					id="aa7b2f85-ae54-4073-b154-29cef5ff5c4a">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="e9a1fe13-1cf0-403b-b370-d6e783d3208d"
+						mask="true"
+						optional="false"
+						fixedValue="false">
+					<from>input/events</from>
+					<to>events/events</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					label="severity != null"
+					id="167337d6-8f6a-483f-906d-e958c4ee50ef">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="e3af489e-6eef-46c1-b3b8-d275320d6f74"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>events/events[/severity &lt;= severity]</from>
+					<to>events/events</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					label="events/events"
+					id="7da6e997-0fe7-4b79-883a-9ceca6ad94a9">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="a26b6f06-7b5d-4ead-8a94-6df836a0fd12"
+						serviceId="nabu.analytics.cep.utils.push"
+						resultName="resultc1d3afa59a794872b0af4f8bdb268771"
+						temporaryMapping="true"
+						x="137"
+						y="61"
+						invocationOrder="0"
+						asynchronous="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="58875810-ef9a-4dfa-8647-00e9950ae307"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>events</from>
+						<to>content</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="1f829023-969e-49b7-892e-3c6bf6307b94"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>server</from>
+						<to>endpoint</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="0b0e6a55-f163-4273-977c-bc406fae5742"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>apiKey</from>
+						<to>header/apikey</to>
+					</steps>
+				</steps>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

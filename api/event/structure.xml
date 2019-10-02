@@ -1,0 +1,45 @@
+<structure name="event">
+    <field name="serverGroup" type="java.lang.String"/>
+    <field name="serverName" type="java.lang.String"/>
+    <field minOccurs="0" name="serverHost" type="java.lang.String"/>
+    <field minOccurs="0" name="artifactId" type="java.lang.String"/>
+    <field minOccurs="0" name="localId" type="java.lang.String"/>
+    <field minOccurs="0" name="eventName" type="java.lang.String"/>
+    <field minOccurs="0" name="eventCategory" type="java.lang.String"/>
+    <field minOccurs="0" name="eventCount" type="java.lang.Integer"/>
+    <field minOccurs="0" name="severity" type="java.lang.String"/>
+    <field minOccurs="0" name="alias" type="java.lang.String"/>
+    <field minOccurs="0" name="realm" type="java.lang.String"/>
+    <field minOccurs="0" name="created" timezone="UTC" type="java.util.Date"/>
+    <field minOccurs="0" name="started" timezone="UTC" type="java.util.Date"/>
+    <field minOccurs="0" name="stopped" timezone="UTC" type="java.util.Date"/>
+    <field minOccurs="0" name="duration" type="java.lang.Long"/>
+    <field minOccurs="0" name="timezone" type="java.lang.String"/>
+    <field minOccurs="0" name="code" type="java.lang.String"/>
+    <field minOccurs="0" name="message" type="java.lang.String"/>
+    <field minOccurs="0" name="stacktrace" type="java.lang.String"/>
+    <field minOccurs="0" name="context" type="java.lang.String"/>
+    <field minOccurs="0" name="action" type="java.lang.String"/>
+    <field minOccurs="0" name="externalId" type="java.lang.String"/>
+    <field minOccurs="0" name="reason" type="java.lang.String"/>
+    <field minOccurs="0" name="correlationId" type="java.lang.String"/>
+    <field minOccurs="0" name="deviceId" type="java.lang.String"/>
+    <field minOccurs="0" name="sourcePort" type="java.lang.Integer"/>
+    <field minOccurs="0" name="sourceHost" type="java.lang.String"/>
+    <field minOccurs="0" name="sourceIp" type="java.lang.String"/>
+    <field minOccurs="0" name="destinationHost" type="java.lang.String"/>
+    <field minOccurs="0" name="destinationIp" type="java.lang.String"/>
+    <field minOccurs="0" name="destinationPort" type="java.lang.Integer"/>
+    <field minOccurs="0" name="applicationProtocol" type="java.lang.String"/>
+    <field minOccurs="0" name="transportProtocol" type="java.lang.String"/>
+    <field minOccurs="0" name="networkProtocol" type="java.lang.String"/>
+    <field minOccurs="0" name="sizeIn" type="java.lang.Long"/>
+    <field minOccurs="0" name="sizeOut" type="java.lang.Long"/>
+    <field minOccurs="0" name="method" type="java.lang.String"/>
+    <field minOccurs="0" name="requestUri" type="java.net.URI"/>
+    <field minOccurs="0" name="userAgent" type="java.lang.String"/>
+    <field minOccurs="0" name="language" type="java.lang.String"/>
+    <field minOccurs="0" name="bot" type="java.lang.Boolean"/>
+    <field minOccurs="0" name="responseCode" type="java.lang.Integer"/>
+    <field minOccurs="0" name="anonymized" type="java.lang.Boolean"/>
+</structure>

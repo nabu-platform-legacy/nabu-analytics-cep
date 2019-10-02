@@ -1,0 +1,3 @@
+<structure name="header">
+    <field name="apikey" type="java.lang.String"/>
+</structure>

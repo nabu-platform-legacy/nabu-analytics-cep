@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClient>
+    <method>POST</method>
+    <path>/event</path>
+    <requestHeaders>apiKey</requestHeaders>
+    <input>nabu.analytics.cep.api.eventList</input>
+    <requestType>XML</requestType>
+    <responseType>XML</responseType>
+    <lenient>true</lenient>
+</restClient>

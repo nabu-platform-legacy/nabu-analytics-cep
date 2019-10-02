@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="java.lang.Object" maxOccurs="unbounded" minOccurs="0" name="events"/>
+    </structure>
+    <structure name="output"/>
+    <field minOccurs="0" name="apiKey" type="java.lang.String"/>
+    <field minOccurs="0" name="server" type="java.lang.String"/>
+    <structure definition="nabu.analytics.cep.api.eventList" name="events"/>
+    <field name="severity" type="be.nabu.utils.cep.api.EventSeverity"/>
+</structure>

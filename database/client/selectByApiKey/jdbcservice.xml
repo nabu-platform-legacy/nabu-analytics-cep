@@ -1,0 +1,6 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.analytics.cep.types.model.cep.ComplexEventClient</outputDefinition>
+	<sql>select *
+from ~complex_event_clients cec
+where cec.api_key = :apiKey</sql>
+</jdbcService>
