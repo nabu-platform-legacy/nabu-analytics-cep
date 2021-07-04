@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.analytics.cep.types.model.cep.ComplexEvent</type>
+        <x>391</x>
+        <y>40</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.analytics.cep.types.model.cep.ComplexEventClient</type>
+        <x>883</x>
+        <y>154</y>
+    </entries>
+</dataModel>
